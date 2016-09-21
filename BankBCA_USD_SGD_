@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+jual=`curl -s http://klikbca.com/ | grep SGD -A2 | cut -d">" -f2 | 
+
+cut -d"<" -f1 | xargs | cut -d" " -f2'
+beli=`curl -s http://klikbca.com/ | grep SGD -A2 | cut -d">" -f2 | 
+
+cut -d"<" -f1 | xargs | cut -d" " -f3`
+jual=`curl -s http://klikbca.com/ | grep USD -A2 | cut -d">" -f2 | 
+
+cut -d"<" -f1 | xargs | cut -d" " -f2'
+beli=`curl -s http://klikbca.com/ | grep USD -A2 | cut -d">" -f2 | 
+
+cut -d"<" -f1 | xargs | cut -d" " -f3`
+echo "`date | "harga jual : $jualUSD" | "harga beli : $beliUSD"
+echo "`date | "harga beli : $beliSGD" | "harga jual : $jualSGD"
