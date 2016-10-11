@@ -1,0 +1,4 @@
+data =`curl -s http://stats.labs.apnic.net/ipv6/ID | grep ASN -A1 | grep ASN Name -A2 | grep IPv6 Capable -A3 | grep IPv6 Preferred -A4 | grep Samples -A5 | cut -d">" -f2 | cut -d"<" -f1 | xargs | cut -d" " -f2`
+
+echo "hasil = $data"
+ 
