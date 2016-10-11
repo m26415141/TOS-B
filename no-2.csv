@@ -1,3 +1,4 @@
-script 0 7 1-9 * * 1-5 ["$(date '+%a')" = "Mon" ] && <command>
- 
+jual=`curl -s http://www.elevenia.co.id/prd-apple-iphone-7-plus-black-128gb-garansi-6242166 | grep Harga -A2 | cut -d">" -f2 | cut -d"<" -f1 | xargs | cut -d" " -f2`
+
+echo "'date | "Harga : $jual"
 
